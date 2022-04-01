@@ -1,9 +1,9 @@
 package kr.ac.jejunu;
 
-public class JejuUserDao extends UserDao {
-    public JejuUserDao(ConnectionMaker connectionMaker) {
-        super(connectionMaker);
-    }
+//public class JejuUserDao extends UserDao {
+//    public JejuUserDao(ConnectionMaker connectionMaker) {
+//        super(connectionMaker);
+//    }
 
 //    @Override
 //    public Connection getConnection() throws ClassNotFoundException, SQLException {
@@ -15,4 +15,4 @@ public class JejuUserDao extends UserDao {
 //                "jejupw"
 //        );
 //    }
-}
+//}
