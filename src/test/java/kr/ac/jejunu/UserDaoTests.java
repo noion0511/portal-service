@@ -14,10 +14,11 @@ public class UserDaoTests {
     private static UserDao userDao;
 
     @BeforeAll
-    public static void  setUp() {
+    public static void setUp() {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(DaoFactory.class);
         userDao = applicationContext.getBean("userDao", UserDao.class);
     }
+
     @Test
     public void findById() throws SQLException, ClassNotFoundException {
         Integer id = 1;
