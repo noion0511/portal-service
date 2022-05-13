@@ -21,9 +21,9 @@ public class UserServlet extends GenericServlet {
 
     @Override
     public void init() throws ServletException {
-        ApplicationContext applicationContext =
-                new AnnotationConfigApplicationContext("kr.ac.jejunu");
-        this.userDao = applicationContext.getBean("userDao", UserDao.class);
+//        ApplicationContext applicationContext =
+//                new AnnotationConfigApplicationContext("kr.ac.jejunu");
+//        this.userDao = applicationContext.getBean("userDao", UserDao.class);
 
         System.out.println("********* init *********");
         super.init();
