@@ -1,10 +1,7 @@
 package kr.ac.jejunu;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -14,10 +11,10 @@ import java.io.*;
 
 @Controller
 public class UserController {
-    @RequestMapping("/user")
+    @GetMapping(path = "/user/{id}/{name}", produces = "application/json")
     public ModelAndView user(
-            @RequestParam("id") Integer id
-            , @RequestParam("name") String name
+            @PathVariable("id") Integer id
+            , @PathVariable("name") String name
     ) {
         User user = new User();
         user.setId(id);
@@ -26,6 +23,12 @@ public class UserController {
         modelAndView.addObject(user);
         return modelAndView;
     }
+
+//    @GetMapping(value = "modelattribute", produces = "application/json")
+//    public String modelAttribute(@ModelAttribute User user){
+//        user.setName("오희주");
+//        return "redirect:/upload";
+//    }
 
     @RequestMapping("/upload")
     public void upload() {

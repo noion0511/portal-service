@@ -26,6 +26,12 @@
             </beans:bean>
         </beans:property>
     </beans:bean>
+    <interceptors>
+        <interceptor>
+            <mapping path="/**/*"/>
+            <beans:bean class="kr.ac.jejunu.UserInterceptor" />
+        </interceptor>
+    </interceptors>
 
     <resources mapping="/images/**" location="/WEB-INF/static/"/>
 </beans:beans>
